@@ -5,11 +5,13 @@ import torchmetrics.functional as metrics
 
 from jaffalearn import SupervisedSystem
 
+import system.evaluation as evaluation
+
 
 class Baseline(SupervisedSystem):
     def __init__(self, model, lr, lr_scheduler, model_args=None):
         eval_metrics = {
-            'acc': _accuracy,
+            'acc': evaluation.accuracy,
             'mAP': metrics.average_precision,
         }
         super().__init__(model, _cce, metrics=eval_metrics,
@@ -47,10 +49,6 @@ class Baseline(SupervisedSystem):
         system = cls(model, **params)
         system.restore_state(checkpoint)
         return system
-
-
-def _accuracy(y_pred, y_true):
-    return metrics.accuracy(y_pred, y_true.argmax(dim=1))
 
 
 def _cce(y_pred, y_true, reduction='mean'):

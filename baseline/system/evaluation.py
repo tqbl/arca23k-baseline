@@ -24,7 +24,11 @@ def compute_scores(y_pred, y_true, average=None):
         'average': average,
     }
     ap = metrics.average_precision(y_pred, y_true, **kwargs)
-    acc = metrics.accuracy(y_pred, y_true.argmax(dim=1), **kwargs)
+    acc = accuracy(y_pred, y_true, **kwargs)
 
     # Return scores as a tensor with shape (N, 2)
     return torch.tensor([ap, acc]).T.view(-1, 2)
+
+
+def accuracy(y_pred, y_true, **kwargs):
+    return metrics.accuracy(y_pred, y_true.argmax(dim=1), **kwargs)
