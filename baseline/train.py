@@ -59,7 +59,7 @@ def parse_args():
     params.add_argument('--hop_length', type=cli.maybe_float, metavar='NUM')
     params.add_argument('--features', type=cli.dict, metavar='SPEC')
     params.add_argument('--cache_features', type=cli.boolean, metavar='BOOL')
-    params.add_argument('--model', choices=['vgg9a', 'vgg11a'])
+    params.add_argument('--model', choices=['vgg9a', 'vgg11a', 'resnet18a'])
     params.add_argument('--weights_path', type=Path, metavar='PATH')
     params.add_argument('--label_noise', type=cli.dict, metavar='DICT')
     params.add_argument('--n_epochs', type=int, metavar='N')
