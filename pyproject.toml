@@ -7,8 +7,8 @@ license = "ISC"
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.11"
-jaffadata = "^0.2.1"
-jaffalearn = "^0.1.1"
+jaffadata = "^0.3.0"
+jaffalearn = "^0.2.0"
 numpy = "^1.21.4"
 pandas = "^1.3.4"
 torch = "^1.8.1"

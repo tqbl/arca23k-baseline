@@ -1,3 +1,4 @@
+Warning: The lock file is not up to date with the latest changes in pyproject.toml. You may be getting outdated dependencies. Run update to update them.
 absl-py==0.15.0; python_version >= "3.8" and python_version < "3.11"
 cachetools==4.2.4; python_version >= "3.5" and python_version < "4.0" and (python_version >= "3.8" and python_full_version < "3.0.0" and python_version < "3.11" or python_version >= "3.8" and python_version < "3.11" and python_full_version >= "3.6.0")
 certifi==2021.10.8; python_version >= "3.8" and python_full_version < "3.0.0" and python_version < "3.11" or python_version >= "3.8" and python_version < "3.11" and python_full_version >= "3.6.0"
@@ -7,8 +8,8 @@ google-auth-oauthlib==0.4.6; python_version >= "3.8" and python_version < "3.11"
 google-auth==2.3.3; python_version >= "3.8" and python_full_version < "3.0.0" and python_version < "3.11" or python_version >= "3.8" and python_version < "3.11" and python_full_version >= "3.6.0"
 grpcio==1.41.1; python_version >= "3.8" and python_version < "3.11"
 idna==3.3; python_version >= "3.8" and python_full_version < "3.0.0" and python_version < "3.11" or python_version >= "3.8" and python_version < "3.11" and python_full_version >= "3.6.0"
-jaffadata==0.2.1; python_version >= "3.8" and python_version < "3.11"
-jaffalearn==0.1.1; python_version >= "3.8" and python_version < "3.11"
+jaffadata==0.3.0; python_version >= "3.8" and python_version < "3.11"
+jaffalearn==0.2.0; python_version >= "3.8" and python_version < "3.11"
 markdown==3.3.4; python_version >= "3.8" and python_version < "3.11"
 numpy==1.21.4; python_version >= "3.7" and python_version < "3.11"
 oauthlib==3.1.1; python_version >= "3.8" and python_full_version < "3.0.0" and python_version < "3.11" or python_version >= "3.8" and python_version < "3.11" and python_full_version >= "3.4.0"
