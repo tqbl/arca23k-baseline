@@ -14,7 +14,7 @@ class Baseline(SupervisedSystem):
             'acc': evaluation.accuracy,
             'mAP': metrics.average_precision,
         }
-        super().__init__(model, _cce, metrics=eval_metrics,
+        super().__init__(model, cce, metrics=eval_metrics,
                          model_args=model_args)
 
         # Use AdamW for optimization
@@ -51,8 +51,5 @@ class Baseline(SupervisedSystem):
         return system
 
 
-def _cce(y_pred, y_true, reduction='mean'):
-    loss = (-y_true * y_pred.log_softmax(dim=1)).sum(dim=1)
-    if reduction == 'mean':
-        return loss.mean()
-    return loss
+def cce(y_pred, y_true):
+    return (-y_true * y_pred.log_softmax(dim=1)).sum(dim=1).mean()
