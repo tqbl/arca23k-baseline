@@ -9,8 +9,8 @@ def dataset(name, arca23k_dir, fsd50k_dir, seed=None):
         return Arca23K(arca23k_dir, fsd50k_dir)
     if name.lower() == 'arca23k-fsd':
         return Arca23K_FSD(arca23k_dir, fsd50k_dir)
-    if name.lower()[:5] == 'mixed':
-        frac = float(name[6:])
+    if name.lower()[:8] == 'arca23k-':
+        frac = float(name[8:])
         noisy = Arca23K(arca23k_dir, fsd50k_dir)
         clean = Arca23K_FSD(arca23k_dir, fsd50k_dir)
         clean_train_set = clean['training']

@@ -72,8 +72,8 @@ The ``DATASET`` argument accepts the following values:
 
 * ``arca23k`` - Train using the ARCA23K dataset.
 * ``arca23k-fsd`` - Train using the ARCA23K-FSD dataset.
-* ``mixed-p`` - Train using a mixture of ARCA23K and ARCA23K-FSD.
-  Replace ``p`` with a fraction that represents the percentage of
+* ``arca23k-<p>`` - Train using a mixture of ARCA23K and ARCA23K-FSD.
+  Replace ``<p>`` with a fraction that represents the percentage of
   ARCA23K examples to be present in the training set.
 
 The ``--experiment_id`` option is used to differentiate experiments. It
