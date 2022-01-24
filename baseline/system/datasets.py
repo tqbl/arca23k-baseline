@@ -28,7 +28,7 @@ def mix_subsets(noisy_train_set, clean_train_set, frac, seed=None):
     target_sizes = clean_train_set.tags.groupby('label').size()
 
     def _sample(x):
-        return x.sample(target_sizes[x[0].label], random_state=seed)
+        return x.sample(target_sizes[x.label[0]], random_state=seed)
 
     # Select proportion of examples from noisy training set
     df = noisy_train_set.tags.groupby('label').apply(_sample).droplevel(0)
